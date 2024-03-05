@@ -1,4 +1,4 @@
-const isToxic = /(gandu|maderchod|bhosdike|bhosda|laud?a|chut?iya|maa ki chut|behenchod|behen ki chut|tatto ke saudagar|machar ki jhant|jhant? ka baal|Rand?i ka aulad|chuchi|booob?ie?s|to?lo?l|idiot|nigga|fuck|dick|bitch|tits|bastard|asshole|a[su,w,yu])/i;
+const isToxic = /(gandu|chamar|rand|habiba|habbo|chinaal|chodu|lend|Chud gaya|choot|muthhi|sex|sax sux|katwa|madarchod|bhosdike|bhosda|lund|lauda|chutiya|maa ki chut|behenchod|behen ki chut|tatto ke saudagar|machar ki jhant|jhant ka baal|Randi ka aulad|chuchi|booobies|lol|idiot|nigga|fuck|dick|bitch|tits|bastard|asshole|a[su,w,yu])/i;
 
 import axios from "axios"
 import fetch from "node-fetch"
@@ -29,7 +29,7 @@ export async function before(m, { isAdmin, isBotAdmin }) {
             "You appear to be toxic. Calm down!",
             "Don't be so toxic. You can relax!",
             "There's nothing more I could say, you're totally the most toxic person in the world!",
-            "Your toxic meter also goes above 100%."
+            "PHIR EK AUR BAAR GAALI DIYA TO GAND ME REPTE PADENGE🤬🤬."
         ];
 
         const toxicityPercentage = Number(analysisResult.toxicity * 100).toFixed(2)
