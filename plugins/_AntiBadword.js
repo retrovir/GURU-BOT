@@ -1,4 +1,4 @@
-const isToxic = /(gandu|bhadwe|bhadwa|gay|lesbo|tmkc|chodenge|baap|bot|chut|bc|mc|gm|gawar|chutiya bot|bot is chytiya|gaaand|loond|chutmarike|chamar|rand|habiba|habbo|chinaal|chodu|lend|Chud gaya|choot|muthhi|sex|sax sux|katwa|madarchod|bhosdike|bhosda|lund|lauda|chutiya|maa ki chut|behenchod|behen ki chut|tatto ke saudagar|machar ki jhant|jhant ka baal|Randi ka aulad|chuchi|booobies|lol|idiot|nigga|fuck|dick|bitch|tits|bastard|asshole|a[su,w,yu])/i;
+const isToxic = /(gandu|bhadwe|bhadwa|gay|lesbo|tmkc|chodenge|baap|chut|bc|mc|gm|gawar|chutiya bot|bot is chytiya|gaaand|loond|chutmarike|chamar|rand|habiba|habbo|chinaal|chodu|lend|Chud gaya|choot|muthhi|sex|sax sux|katwa|madarchod|bhosdike|bhosda|lund|lauda|chutiya|maa ki chut|behenchod|behen ki chut|tatto ke saudagar|machar ki jhant|jhant ka baal|Randi ka aulad|chuchi|booobies|lol|idiot|nigga|fuck|dick|bitch|tits|bastard|asshole|a[su,w,yu])/i;
 
 import axios from "axios"
 import fetch from "node-fetch"
@@ -21,7 +21,7 @@ export async function before(m, { isAdmin, isBotAdmin }) {
             "☠️  ☠️  ❤️  ❤️  ❤️", // A bit toxic, calm down!
             "☠️  ☠️  ☠️  ❤️  ❤️", // Quite toxic, you can relax!
             "☠️  ☠️  ☠️  ☠️  ❤️", // Highly toxic, be careful!
-            "☠️  ☠️  ☠️  ☠️  ☠️"   // Extremely toxic!
+            "🤬  🤬  🤬  🤬  🤬"   // Extremely toxic!
         ];
         var toxicityVerdict = [
             "You are so friendly. Very welcoming to know you!",
@@ -29,7 +29,7 @@ export async function before(m, { isAdmin, isBotAdmin }) {
             "You appear to be toxic. Calm down!",
             "Don't be so toxic. You can relax!",
             "There's nothing more I could say, you're totally the most toxic person in the world!",
-            "PHIR EK AUR BAAR GAALI DIYA TO GAND ME REPTE PADENGE 🍑👋."
+            "PHIR EK AUR BAAR GAALI DIYA TO GAND ME REPTE PADENGE 🍑👋, AUR TUMHARI CHUTTAD TAMATAR 🍅 JAISE LAAL KARDENGE🤬."
         ];
 
         const toxicityPercentage = Number(analysisResult.toxicity * 100).toFixed(2)
@@ -55,7 +55,7 @@ export async function before(m, { isAdmin, isBotAdmin }) {
         if (isBotAdmin) {
             // Remove the participant from the group
             global.db.data.users[m.sender].warn += 1
-            return this.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: messageId, participant: removeParticipant }})
+            return this.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: messageId, participant: removeParticipant }})
         } 
     }
     return !0
